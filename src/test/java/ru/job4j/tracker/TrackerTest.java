@@ -15,4 +15,18 @@ public class TrackerTest {
         Item result = tracker.findById(item.getId());
         assertEquals(item.getName(), result.getName());
     }
+
+    @Test
+    public void whenReplace() {
+        Tracker tracker = new Tracker();
+        Item bug = new Item();
+        bug.setName("Bug");
+        tracker.add(bug);
+        int id = bug.getId();
+        Item bugWithDesc = new Item();
+        bugWithDesc.setName("Bug with description");
+        tracker.replace(id, bugWithDesc);
+        assertEquals("Bug with description", tracker.findById(id).getName());
+
+    }
 }
