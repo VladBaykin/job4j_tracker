@@ -25,8 +25,7 @@ public class StartUITest {
     public void whenReplaceItem() {
         Output output = new StubOutput();
         Tracker tracker = new Tracker();
-        Item item = new Item();
-        item.setName("Replaced item");
+        Item item = new Item("Replaced item");
         tracker.add(item);
         String replacedName = "New item name";
         Input input = new StubInput(
@@ -42,8 +41,7 @@ public class StartUITest {
     public void whenDeleteItem() {
         Output output = new StubOutput();
         Tracker tracker = new Tracker();
-        Item item = new Item();
-        item.setName("Deleted item");
+        Item item = new Item("Deleted item");
         tracker.add(item);
         Input input = new StubInput(
                 new String[] {"0", String.valueOf(item.getId()), "1"});
@@ -74,8 +72,7 @@ public class StartUITest {
         Input in = new StubInput(
                 new String[] {"0", "1"});
         Tracker tracker = new Tracker();
-        Item item = new Item();
-        item.setName("test");
+        Item item = new Item("test");
         tracker.add(item);
         List<UserAction> actions = new ArrayList<>();
         actions.add(new FindAllAction(out));
@@ -97,8 +94,7 @@ public class StartUITest {
     @Test
     public void whenFindByName() {
         Tracker tracker = new Tracker();
-        Item item = new Item();
-        item.setName("test");
+        Item item = new Item("test");
         tracker.add(item);
         Output out = new StubOutput();
         Input in = new StubInput(
@@ -123,8 +119,7 @@ public class StartUITest {
     @Test
     public void whenFindById() {
         Tracker tracker = new Tracker();
-        Item item = new Item();
-        item.setName("test");
+        Item item = new Item("test");
         tracker.add(item);
         Output out = new StubOutput();
         Input in = new StubInput(
