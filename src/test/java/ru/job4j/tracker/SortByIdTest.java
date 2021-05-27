@@ -13,7 +13,7 @@ public class SortByIdTest {
     public void compare() {
         Item item = new Item("Name");
         Item item2 = new Item("Name2");
-        Tracker tracker = new Tracker();
+        MemTracker tracker = new MemTracker();
         tracker.add(item);
         tracker.add(item2);
         List<Item> items = Arrays.asList(item, item2);

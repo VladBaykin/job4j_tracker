@@ -13,7 +13,7 @@ public class SortByNameTest {
     public void compare() {
         Item item = new Item("bName");
         Item item2 = new Item("aName");
-        Tracker tracker = new Tracker();
+        MemTracker tracker = new MemTracker();
         tracker.add(item);
         tracker.add(item2);
         List<Item> items = Arrays.asList(item, item2);

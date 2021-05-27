@@ -1,9 +1,9 @@
 package ru.job4j.tracker.action;
 
+import ru.job4j.tracker.Store;
 import ru.job4j.tracker.input.Input;
 import ru.job4j.tracker.Item;
 import ru.job4j.tracker.output.Output;
-import ru.job4j.tracker.Tracker;
 
 public class FindAllAction implements UserAction {
     private final Output out;
@@ -18,7 +18,7 @@ public class FindAllAction implements UserAction {
     }
 
     @Override
-    public boolean execute(Input input, Tracker tracker) {
+    public boolean execute(Input input, Store tracker) {
         out.println("=== Show all items ===");
         for (Item items : tracker.findAll()) {
             out.println("Name: " + items.getName()
