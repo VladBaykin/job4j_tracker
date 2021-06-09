@@ -22,6 +22,11 @@ public class Item {
         this.name = name;
     }
 
+    public Item(String name, String description) {
+        this.name = name;
+        this.description = description;
+    }
+
     public Item(String name, String description, Timestamp created) {
         this.name = name;
         this.description = description;
@@ -46,6 +51,22 @@ public class Item {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Timestamp getCreated() {
+        return created;
+    }
+
+    public void setCreated(Timestamp created) {
+        this.created = created;
     }
 
     @Override
